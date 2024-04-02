@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import GlobalStyleProvider from "./provider/GlobalStyleProvider";
+import Navbar from "./components/Navbar";
+import ContextProvider from "./provider/ContextProvider";
+import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +20,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ContextProvider>
+          <header className="fixed top-0 left-0 z-10 w-full bg-gradient-to-tr from-cyan-700 via-sky-500 to-blue-500">
+            <Navbar />
+          </header>
+          <GlobalStyleProvider>
+            {children}
+          </GlobalStyleProvider>
+        </ContextProvider>
+        <footer className=''>
+          <Footer />
+        </footer>
+      </body>
     </html>
   );
 }
