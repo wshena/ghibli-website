@@ -30,6 +30,8 @@ export default function Home() {
     return () => window.removeEventListener("resize", updateWindowHeight);
   }, []);
 
+  console.log(process.env.NEXT_PUBLIC_API_URL)
+
   return (
     <main className="mt-[50px] h-[100%]" style={{ height: windowHeight }}>
       <div className='relative w-full h-[100vh] bg-center bg-cover' style={{

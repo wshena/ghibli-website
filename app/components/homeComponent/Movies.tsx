@@ -45,7 +45,7 @@ const Movies = () => {
     <section className='py-[2.5rem] w-full max-h-[800px] overflow-y-auto bg-center bg-cover' style={{
       backgroundImage: 'url("/kiki-wallpaper.jpg")',
       scrollbarWidth: 'none', // Firefox
-      '&::-webkit-scrollbar': {
+      '&::WebkitScrollbar': {
         display: 'none' // Chrome, Safari, Opera
       }
     }}>

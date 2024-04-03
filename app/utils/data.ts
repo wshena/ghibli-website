@@ -11,7 +11,7 @@ const fetchDataFromLink = async (link:string) => {
 
 const fetchDataWithParams = async (params:string) => {
   try {
-    const res = await axios.get(`https://ghibliapi.vercel.app/${params}`);
+    const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/${params}`);
     return res.data;
   } catch (error) {
     console.log(error)
@@ -20,7 +20,7 @@ const fetchDataWithParams = async (params:string) => {
 
 const fetchDataWithLimit = async (params:string, count:number) => {
   try {
-    const res = await axios.get(`https://ghibliapi.vercel.app/${params}/?limit=${count}`);
+    const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/${params}/?limit=${count}`);
     return res.data;
   } catch (error) {
     console.log(error)
@@ -29,7 +29,7 @@ const fetchDataWithLimit = async (params:string, count:number) => {
 
 const fetchDataPramsWithId = async (params:string, id:string) => {
   try {
-    const res = await axios.get(`https://ghibliapi.vercel.app/${params}/${id}`);
+    const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/${params}/${id}`);
     return res.data;
   } catch (error) {
     console.log(error)
