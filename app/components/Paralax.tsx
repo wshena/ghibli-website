@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, RefObject } from 'react';
 
 interface Props {
   children: React.ReactNode
@@ -10,7 +10,7 @@ const ParallaxComponent = ({children}:Props) => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   // Refs for the elements to animate
-  const parallaxElementRef = useRef(null);
+  const parallaxElementRef = useRef<HTMLDivElement>(null);
   
   // Effect to update the scroll position
   useEffect(() => {
