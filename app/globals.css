@@ -14,6 +14,14 @@ body {
   box-sizing: border-box;
 }
 
+.movie-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.movie-scroll::-moz-scrollbar {
+  display: none; /* Firefox */
+}
+
 .container {
   @apply max-w-[1000px] mx-auto
 }

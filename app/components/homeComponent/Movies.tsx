@@ -42,12 +42,12 @@ const Movies = () => {
   }, [])
 
   return (
-    <section className='py-[2.5rem] w-full max-h-[800px] overflow-y-auto bg-center bg-cover' style={{
+    <section className='py-[2.5rem] w-full max-h-[800px] overflow-y-auto bg-center bg-cover movie-scroll' style={{
       backgroundImage: 'url("/kiki-wallpaper.jpg")',
       scrollbarWidth: 'none', // Firefox
-      '&::WebkitScrollbar': {
-        display: 'none' // Chrome, Safari, Opera
-      }
+      // '&::WebkitScrollbar': {
+      //   display: 'none' // Chrome, Safari, Opera
+      // }
     }}>
       <div className="container md:px-[30px] xl:px-0">
         <div className="flex flex-col items-center gap-[20px] md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-[20px]">
